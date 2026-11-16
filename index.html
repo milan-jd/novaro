@@ -15,12 +15,9 @@ nav .wrap{display:flex;align-items:center;gap:32px;height:72px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:21px;margin-right:auto;color:var(--ink);text-decoration:none}
 .logo i{width:26px;height:26px;border-radius:8px;background:conic-gradient(from 200deg,var(--vi),var(--cy),var(--mint),var(--vi))}
 nav a.l{color:var(--mut);text-decoration:none;font-size:15px;transition:color .2s}
-nav a.l:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 22px;border-radius:12px;font:600 15px Inter;text-decoration:none;cursor:pointer;border:0;transition:transform .2s,box-shadow .25s,background .25s}
 .btn.dark{background:var(--ink);color:#fff}
-.btn.dark:hover{background:#5B4BE0;box-shadow:0 0 0 6px rgba(109,91,255,.18),0 14px 30px rgba(109,91,255,.35);transform:translateY(-1px)}
 .btn.gh{border:1px solid #D7DAE0;color:var(--ink);background:#fff}
-.btn.gh:hover{border-color:var(--ink)}
 .hero{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;padding:80px 0 60px}
 .eb{display:inline-flex;gap:8px;align-items:center;font:600 13px Inter;color:#5B4BE0;background:#F0EEFF;padding:7px 12px;border-radius:999px}
 h1{font-size:clamp(44px,6vw,72px);line-height:1.02;margin:22px 0 20px}
@@ -29,7 +26,6 @@ h1{font-size:clamp(44px,6vw,72px);line-height:1.02;margin:22px 0 20px}
 .dash{background:#0D1017;border-radius:22px;padding:24px;color:#E9EAF0;box-shadow:0 30px 70px rgba(13,16,23,.25)}
 .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .kpi{background:#151925;border-radius:14px;padding:16px;transition:transform .25s,box-shadow .25s}
-.kpi:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(155,240,200,.5)}
 .kpi small{display:block;font-size:12px;color:#8D93A6;margin-bottom:8px}
 .kpi b{font:700 26px "Inter Tight",Inter,sans-serif}
 .kpi em{font-style:normal;font-size:12px;color:#5BE3A8;margin-left:6px}
@@ -46,7 +42,6 @@ section{padding:90px 0}
 .sh p{color:var(--mut);font-size:18px;margin-top:14px;line-height:1.5}
 .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .feat{border:1px solid var(--line);border-radius:20px;padding:30px;transition:transform .3s,box-shadow .3s,border-color .3s}
-.feat:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(11,13,18,.08);border-color:#D4CFFF}
 .feat .ic{width:44px;height:44px;border-radius:12px;background:#F0EEFF;display:grid;place-items:center;margin-bottom:22px}
 .feat h3{font-size:22px;margin-bottom:10px}
 .feat p{color:var(--mut);line-height:1.55}
@@ -56,7 +51,6 @@ section{padding:90px 0}
 .sw.an{background:#5B4BE0}.sw.an i{transform:translateX(24px)}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
 .pc{border:1px solid var(--line);border-radius:20px;padding:30px;position:relative;transition:transform .3s,box-shadow .3s}
-.pc:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(11,13,18,.12)}
 .pc h3{font:600 17px Inter;color:var(--mut)}
 .pr{font:700 52px "Inter Tight",Inter,sans-serif;letter-spacing:-.04em;margin:12px 0 4px}
 .pr small{font:500 16px Inter;color:#9CA3AF;letter-spacing:0}
@@ -82,6 +76,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .rv.in{opacity:1;transform:none}
 @media(max-width:560px){.kpis{grid-template-columns:minmax(0,1fr);gap:8px}.kpi{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}.kpi small{margin:0;font-size:13px}.kpi b{font-size:21px;white-space:nowrap}.kpi em{margin-left:8px}.chart{height:220px}}
 @media(max-width:860px){.hero,.feats,.cards{grid-template-columns:minmax(0,1fr)}.hero>*{min-width:0}.dash{padding:16px}.kpis{gap:8px}html,body{overflow-x:hidden}nav a.l{display:none}.hero{padding-top:40px}}
+/* touch polish: no browser tap flash, no outline after a tap, soft press feedback instead */
+*{-webkit-tap-highlight-color:transparent}
+a,button,input,select,textarea,label,[role=button]{touch-action:manipulation}
+:focus:not(:focus-visible){outline:none}
+button,a,.btn{-webkit-user-select:none;user-select:none}
+@media (hover:none){a:active,button:active,[role=button]:active{transform:scale(.97);transition:transform .12s ease}}
+
+@media (hover:hover) and (pointer:fine){nav a.l:hover{color:var(--ink)}.btn.dark:hover{background:#5B4BE0;box-shadow:0 0 0 6px rgba(109,91,255,.18),0 14px 30px rgba(109,91,255,.35);transform:translateY(-1px)}.btn.gh:hover{border-color:var(--ink)}.kpi:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(155,240,200,.5)}.feat:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(11,13,18,.08);border-color:#D4CFFF}.pc:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(11,13,18,.12)}}
 </style></head><body>
 <nav id="nav"><div class="wrap"><a class="logo" href="#top"><i></i>Novaro</a><a class="l" href="#product">Product</a><a class="l" href="#pricing">Pricing</a><a class="l" href="#start">Customers</a><a class="btn dark" href="#start" style="height:40px">Get started</a></div></nav>
 <div class="wrap" id="top">
