@@ -1,6 +1,6 @@
 # Novaro: concept landing page
 
-A landing page for **Novaro**, a fictional revenue-intelligence SaaS. It's a portfolio piece by **Milan John Davis**.
+A concept build: a landing page for **Novaro**, a revenue-intelligence SaaS. It's a portfolio piece by **Milan John Davis**.
 
 **Live site:** https://milan-jd.github.io/novaro/
 
