@@ -1,12 +1,12 @@
 # Novaro: concept landing page
 
-A hand-coded marketing site for **Novaro**, a fictional revenue-intelligence SaaS. It's a portfolio piece by **Milan John Davis**.
+A landing page for **Novaro**, a fictional revenue-intelligence SaaS. It's a portfolio piece by **Milan John Davis**.
 
 **Live site:** https://milan-jd.github.io/novaro/
 
 ## What it shows
 
-- Hand-written HTML, CSS and vanilla JavaScript in a single file. No page builder, template or framework.
+- Plain HTML, CSS and JavaScript in a single file. No page builder or framework.
 - An animated dashboard: count-up KPIs, a line chart that draws itself on load, and a hover tooltip that tracks the curve.
 - Scroll-reveal sections built on `IntersectionObserver`.
 - A monthly/annual pricing toggle with animated price changes and a contextual savings badge.
